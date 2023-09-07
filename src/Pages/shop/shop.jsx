@@ -1,10 +1,18 @@
 import React from 'react'
+import {PRODUCT} from '../../products'
+import {Product} from "./product"
+import './shop.css'
 
-export default function Shophop() {
+export const Shop = () => {
   return (
     <div className='shop'>
-        <div className="">
-            <h1>PedroTech</h1>
+        <div className="shopTitle">
+            <h1>Dadaieo Shop</h1>
+        </div>
+        <div className="products">
+          {PRODUCT.map((product)=>(
+          <Product data={product} />
+          ))}
         </div>
     </div>
   )
